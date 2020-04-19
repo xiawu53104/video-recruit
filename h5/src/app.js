@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect
@@ -18,7 +18,7 @@ function App(props) {
               <AuthorizeRoute key={item.path} {...item}></AuthorizeRoute> 
               : <Route key={item.path} {...item}></Route>
           })}
-          <Route path="*" render={() => <Redirect to="/login"></Redirect>}></Route>
+          <Route path="*" render={() => <Redirect to="/home"></Redirect>}></Route>
         </Switch>
       </Router>
     </React.Suspense>

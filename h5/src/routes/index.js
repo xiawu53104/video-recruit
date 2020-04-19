@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Login = React.lazy(() => import('../pages/login/index'));
-const Test = React.lazy(() => import('../pages/test/index'));
+const Home = React.lazy(() => import('../pages/home/index'));
 
 const routes = [
   {
@@ -10,8 +10,8 @@ const routes = [
     authorize: false
   },
   {
-    path: '/test',
-    component: Test,
+    path: '/home',
+    component: Home,
     authorize: true
   },
 ]

@@ -11,6 +11,7 @@
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "antd-mobile": "^2.3.1",
+    "axios": "^0.19.2",
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.1.0",
@@ -161,7 +162,6 @@
     "@babel/plugin-transform-react-jsx-self": "^7.9.0",
     "@babel/plugin-transform-react-jsx-source": "^7.9.0",
     "babel-plugin-import": "^1.13.0",
-    "node-sass": "^4.13.1",
-    "postcss-px2rem-exclude": "0.0.6"
+    "node-sass": "^4.13.1"
   }
 }

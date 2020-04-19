@@ -29,8 +29,6 @@ const postcssNormalize = require('postcss-normalize');
 
 const appPackageJson = require(paths.appPackageJson);
 
-const px2rem = require('postcss-px2rem-exclude');
-
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
@@ -105,11 +103,7 @@ module.exports = function(webpackEnv) {
             // Adds PostCSS Normalize as the reset css with default options,
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
-            postcssNormalize(),
-            px2rem({
-              remUnit: 75,
-              exclude: /node_modules/i
-            })
+            postcssNormalize()
           ],
           sourceMap: isEnvProduction && shouldUseSourceMap,
         },
