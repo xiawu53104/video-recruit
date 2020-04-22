@@ -15,8 +15,18 @@ function App(props) {
         <Switch>
           {routes.map(item => {
             return item.authorize ?
-              <AuthorizeRoute key={item.path} {...item}></AuthorizeRoute> 
-              : <Route key={item.path} {...item}></Route>
+              <AuthorizeRoute
+                key={item.path}
+                {...item}
+              /> :
+              <Route
+                key={item.path}
+                path={item.path}
+                render={(routeProps) => {
+                  document.title = item.title || `视频面试`;
+                  return <item.component {...routeProps} />
+                }} 
+              />
           })}
           <Route path="*" render={() => <Redirect to="/home"></Redirect>}></Route>
         </Switch>

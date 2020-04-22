@@ -1,10 +1,5 @@
-import { action, observable } from 'mobx';
+import questionBankStore from './questionBankStore';
 
-class Store {
-  @observable name= "qiphon";
-  @action doSomething(val){
-    this.name = val;
-  }
-}
-
-export default new Store();
+export default {
+  questionBankStore,
+};

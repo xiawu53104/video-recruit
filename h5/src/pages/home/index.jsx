@@ -1,8 +1,7 @@
 import React , { Component } from 'react';
-import { inject, observer } from 'mobx-react';
 import { TabBar } from 'antd-mobile';
 
-const QuestionBank = React.lazy(() => import('./questionBank'));
+const QuestionBank = React.lazy(() => import('./questionBank/index'));
 
 const tabList = [
   { 
@@ -31,14 +30,12 @@ const tabList = [
   },
 ];
 
-@inject("Store")
-@observer
 class Home extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      selectedTab: 'videoManage'
+      selectedTab: 'questionBank'
     };
   }
 

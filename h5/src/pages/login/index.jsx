@@ -79,7 +79,7 @@ export default class Login extends Component {
     }
     if (res.data) {
       const { token } = res.data;
-      token && window.sessionStorage.setItem('token', token);
+      token && window.localStorage.setItem('token', token);
       this.props.history.push('/home');
     }
   }

@@ -7,7 +7,7 @@ const instance = axios.create({
 });
 
 instance.interceptors.request.use(function (config) {
-  const token = window.sessionStorage.getItem('token');
+  const token = window.localStorage.getItem('token');
   if (token) {
     config.headers.token = token;
   }
