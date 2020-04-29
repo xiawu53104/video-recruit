@@ -1,0 +1,16 @@
+.fix-btn-wrap{
+  position: fixed;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: #008DE3;
+  right: 10px;
+  bottom: 120px;
+  text-align: center;
+  color: #fff;
+  padding-top: 15px;
+  .btn-text{
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}

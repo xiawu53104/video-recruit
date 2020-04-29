@@ -2,7 +2,8 @@ import React from 'react';
 
 const Login = React.lazy(() => import('../pages/login/index'));
 const Home = React.lazy(() => import('../pages/home/index'));
-const AddExam = React.lazy(() => import('../pages/home/addExam'));
+const QuestionDetail = React.lazy(() => import('../pages/home/questionBank/questionDetail'));
+const AddQuestion = React.lazy(() => import('../pages/home/questionBank/addQuestion'));
 
 const routes = [
   {
@@ -16,10 +17,16 @@ const routes = [
     authorize: true
   },
   {
-    path: '/questionBank/addExam',
-    component: AddExam,
+    path: '/questionBank/questionDetail/:id',
+    component: QuestionDetail,
     authorize: true,
-    title: '新增试卷',
+    title: '编辑试卷',
+  },
+  {
+    path: '/questionBank/addQuestion/:mode/:id',
+    component: AddQuestion,
+    authorize: true,
+    title: '添加题目',
   },
 ]
 

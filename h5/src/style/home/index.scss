@@ -5,22 +5,6 @@
     width: 100%;
     height: 100%;
     position: relative;
-    .add-btn-wrap{
-      position: absolute;
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background-color: #008DE3;
-      right: 10px;
-      bottom: 80px;
-      text-align: center;
-      color: #fff;
-      padding-top: 15px;
-      .btn-text{
-        font-size: 12px;
-        margin-top: 5px;
-      }
-    }
     .empty-text{
       text-align: center;
       font-size: 14px;
@@ -50,7 +34,87 @@
   }
 }
 
-.pages-home-addExam{
+.pages-home-questionDetail{
   width: 100%;
   height: 100vh;
+  background: #f4f4f4;
+  position: relative;
+  .exam-name{
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding-left: 22px;
+    margin-top: 10px;
+    .label{
+      font-size: 14px;
+      color: #333300;
+      flex: 1 1 auto;
+    }
+    .name{
+      font-size: 16px;
+      color: #000;
+      flex: 5 1 auto;
+      font-weight: bold;
+    }
+  }
+  .list-wrap{
+    .ques-item{
+      background-color: #fff;
+      padding: 10px;
+      margin-top: 10px;
+      .ques-order{
+        font-size: 14px;
+        color: #333300;
+      }
+      .ques-content{
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 8px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      .btns-box{
+        display: flex;
+        justify-content: flex-end;
+        color: #008DE3;
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .empty-wrap{
+    font-size: 14px;
+  }
+  .btm-btn{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.pages-home-addQuestion{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4f4f4;
+  .form-wrap{
+    margin-top: 10px;
+    .label{
+      padding: 15px 15px 9px;
+      font-size: 14px;
+      color: #333;
+      width: 100%;
+    }
+    .picker-wrap{
+      margin-top: 10px;
+    }
+  }
+  .btn-wrap{
+    width: 100%;
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+  }
 }

@@ -5,8 +5,15 @@ class ExamItem extends React.Component {
     super(props);
   }
 
-  handleDelete = () => {
+  handleDelete = (e) => {
+    e.preventDefault();
     this.props.onDelete(this.props.id);
+  }
+
+  handleEdit = (e) => {
+    e.preventDefault();
+    const { id, name } = this.props;
+    this.props.onEdit(id, name);
   }
 
   render() {
@@ -20,7 +27,7 @@ class ExamItem extends React.Component {
             <i className="iconfont icon-shanchu"></i>
             <span>删除</span>
           </div>
-          <div>
+          <div onClick={this.handleEdit}>
             <i className="iconfont icon-ziyuan"></i>
             <span>编辑</span>
           </div>
