@@ -4,6 +4,7 @@ const Login = React.lazy(() => import('../pages/login/index'));
 const Home = React.lazy(() => import('../pages/home/index'));
 const QuestionDetail = React.lazy(() => import('../pages/home/questionBank/questionDetail'));
 const AddQuestion = React.lazy(() => import('../pages/home/questionBank/addQuestion'));
+const AiInvite = React.lazy(() => import('../pages/home/recruitManage/aiInvite'));
 
 const routes = [
   {
@@ -27,6 +28,12 @@ const routes = [
     component: AddQuestion,
     authorize: true,
     title: '添加题目',
+  },
+  {
+    path: '/recruitManage/aiInvite',
+    component: AiInvite,
+    authorize: true,
+    title: 'ai面试邀请',
   },
 ]
 

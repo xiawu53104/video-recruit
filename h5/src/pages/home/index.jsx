@@ -2,6 +2,7 @@ import React , { Component } from 'react';
 import { TabBar } from 'antd-mobile';
 
 const QuestionBank = React.lazy(() => import('./questionBank/index'));
+const RecruitManage = React.lazy(() => import('./recruitManage/index'));
 
 const tabList = [
   { 
@@ -11,10 +12,10 @@ const tabList = [
     component: <div>videoManage</div>
   },
   { 
-    name: 'positionManage',
-    title: '职位管理',
+    name: 'recruitManage',
+    title: '面试管理',
     icon: 'icon-zhiwei',
-    component: <div>positionManage</div>
+    component: <RecruitManage />
   },
   { 
     name: 'questionBank',
@@ -35,7 +36,7 @@ class Home extends Component {
     super(props);
 
     this.state = {
-      selectedTab: 'questionBank'
+      selectedTab: 'videoManage'
     };
   }
 
