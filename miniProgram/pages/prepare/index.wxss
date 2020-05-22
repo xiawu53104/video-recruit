@@ -1,0 +1,33 @@
+/* pages/prepare/index.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  /* background: #4390D6; */
+  /* color: #fff; */
+}
+
+.title{
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.tips-wrap{
+  padding: 0 50rpx;
+  font-size: 26rpx;
+  margin-top: 50rpx;
+  box-sizing: border-box;
+}
+
+.sub-title{
+  font-size: 30rpx;
+}
+
+.tips{
+  margin-top: 15rpx;
+}
+
+.btn-wrap{
+  margin-top: 50rpx;
+}

@@ -1,0 +1,74 @@
+/* pages/recruit/index.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: #F6F6F6;
+}
+
+.pusher-normal{
+  width: 216rpx;
+  height: 330rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 15rpx;
+  z-index: 9;
+}
+
+.pusher-hide{
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -9;
+}
+
+.timmer{
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  top: 20rpx;
+  left: 0;
+  font-size: 28rpx;
+}
+
+.ques-wrap{
+  position: absolute;
+  width: 100vw;
+  padding: 0 40rpx;
+  font-size: 30rpx;
+  left: 0;
+  top: 600rpx;
+  box-sizing: border-box;
+}
+
+.ques-order{
+  margin-bottom: 15rpx;
+}
+
+.btn{
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid #dcdfe6;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 90%;
+  position: fixed;
+  bottom: 50rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}

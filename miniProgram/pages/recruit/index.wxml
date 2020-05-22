@@ -1,0 +1,20 @@
+<!--pages/recruit/index.wxml-->
+<view class="container">
+  <live-pusher
+    id="myPusher"
+    class="{{currentBtnName === 'next' ? 'pusher-normal' : 'pusher-hide'}}"
+    mode="SD"
+    url="{{quesInfo.pushUrl}}"
+    beauty="{{3}}"
+    whiteness="{{3}}"
+    autopush
+    enable-camera>
+  </live-pusher>
+  <view class="timmer">答题倒计时：{{quesDuration}}s</view>
+  <image class="bg-img" src="./images/p.jpg" mode="widthFix"></image>
+  <view class="ques-wrap">
+    <view class="ques-order">第{{quesInfo.rowNo}}题：</view>
+    <view>{{quesInfo.name}}</view>
+  </view>
+  <view class="btn" bindtap="handleClick">{{currentBtnText}}</view>
+</view>

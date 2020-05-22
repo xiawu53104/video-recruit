@@ -1,0 +1,46 @@
+<!--pages/scanCode/index.wxml-->
+<view class="container">
+  <view class="title">欢迎参加{{corpName}}面试</view>
+  <view class="form-wrap">
+    <view class="form-item">
+      <view class="lable">姓名</view>
+      <input auto-focus placeholder="请输入" data-name="name" bindinput="inputHandle"/>
+    </view>
+    <view class="form-item">
+      <view class="lable">手机号</view>
+      <input placeholder="请输入" model:value="{{userInfo.mobile}}" data-name="mobile" bindinput="inputHandle"/>
+    </view>
+    <view class="form-item">
+      <view class="lable">面试岗位</view>
+      <picker bindchange="bindPickerChange" value="{{selectIndex}}" range="{{positions}}" range-key="name" >
+        <view class="picker">
+          {{positions[selectIndex].name || '请选择'}}
+        </view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <view class="lable">短信验证码</view>
+      <input placeholder="请输入" data-name="smsCode" bindinput="inputHandle"/>
+      <view class="sm-btn" catchtap="openModal">获取验证码</view>
+    </view>
+  </view>
+
+  <view class="start-btn" bindtap="handleClick">开始面试</view>
+
+  <view class="modal-wrap" wx:if="{{showModal}}">
+    <view class="modal-content">
+      <view class="modal-title">图形验证码</view>
+      <view>
+        <input placeholder="请输入验证码" data-name="code" bindinput="inputHandle" class="img-code-input"></input>
+      </view>
+      <view class="img-wrap">
+        <image src="{{imgCodeUrl}}" mode="widthFix" class="img-code"></image>
+        <view class="refresh-btn" catchtap="refreshImgCode">看不清，刷新</view>
+      </view>
+      <view class="btns-wrap">
+        <view class="modal-btn" catchtap="closeModal">取消</view>
+        <view class="modal-btn" catchtap="fetchSmsCode">确定</view>
+      </view>
+    </view>
+  </view>
+</view>

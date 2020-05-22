@@ -1,0 +1,17 @@
+<!--pages/prepare/index.wxml-->
+<view class="container">
+  <view class="title">欢迎参加{{corpName}}公司的面试</view>
+  <view class="tips-wrap">
+    <view class="sub-title">注意事项: </view>
+    <view class="tips">1. 请开启麦克风授权和摄像头授权；</view>
+    <view class="tips">2. 面试过程讲消耗流量，请保持网络通畅；</view>
+    <view class="tips">3. 为了减少干扰，请在安静环境下进行面试；</view>
+    <view class="tips">4. 点击开始答题进入答题界面；</view>
+    <view class="tips">5. 祝您面试顺利；</view>
+  </view>
+
+  <view class="btn-wrap">
+    <button type="default" plain="true" bindtap="startRecruit">开始答题</button>
+  </view>
+  <live-pusher></live-pusher>
+</view>

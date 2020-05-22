@@ -1,0 +1,16 @@
+/**index.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.input-wrap {
+  padding: 20rpx 0;
+}
+
+.input-wrap input {
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}

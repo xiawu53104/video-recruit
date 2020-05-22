@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view>欢迎参加在线面试</view>
+  <view>请输入邀请码</view>
+  <view class="input-wrap">
+    <input placeholder="请输入邀请码" value="{{code}}" bindinput="handleInput" />
+  </view>
+  <button type="primary" bindtap="startRecruit" disabled="{{btnDisable}}">开始面试</button>
+</view>
