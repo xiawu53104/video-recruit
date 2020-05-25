@@ -32,6 +32,10 @@
   font-size: 28rpx;
 }
 
+.bg-img{
+  width: 100%;
+}
+
 .ques-wrap{
   position: absolute;
   width: 100vw;

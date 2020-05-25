@@ -13,5 +13,5 @@
   <view class="btn-wrap">
     <button type="default" plain="true" bindtap="startRecruit">开始答题</button>
   </view>
-  <live-pusher></live-pusher>
+  <live-pusher class="hide-pusher"></live-pusher>
 </view>

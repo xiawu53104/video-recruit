@@ -1,1 +1,7 @@
 /* pages/complete/index.wxss */
+.container{
+  text-align: center;
+  margin-top: 250rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}

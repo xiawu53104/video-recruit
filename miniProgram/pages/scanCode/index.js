@@ -1,4 +1,4 @@
-const { getPositionList, getImgCode, getSmsCode, startRecruit } = require('./apis.js');
+const { getPositionList, getImgCode, getSmsCode, recordRecruit, startRecruit } = require('./apis.js');
 
 // pages/scanCode/index.js
 Page({
@@ -25,8 +25,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const secen = decodeURIComponent(options.secen);
-    const code = secen || '5EC7CFE8E4B0AF822954BA55';
+    const secen = decodeURIComponent(options.secen || '');
+    const code = secen || '5EC7DD8BE4B0AF822954BAA5';
     this.uniCode = code;
 
     getPositionList(code).then(data => {
@@ -178,7 +178,7 @@ Page({
     const sendData = JSON.parse(JSON.stringify(this.data.userInfo));
     delete sendData.code;
     sendData.code = this.uniCode;
-    startRecruit(sendData).then(res => {
+    recordRecruit(sendData).then(res => {
       if (res.msg) {
         wx.showToast({
           title: res.msg,
@@ -187,10 +187,13 @@ Page({
         });
         return;
       }
-      const { corpName, interviewRecordId } = res.data;
-      wx.navigateTo({
-        url: `/pages/prepare/index?corpName=${corpName}&interviewRecordId=${interviewRecordId}`,
-      });
+      const { interviewAiRecordCode } = res.data;
+      startRecruit(interviewAiRecordCode).then(response => {
+        const { corpName, interviewRecordId } = response;
+        wx.navigateTo({
+          url: `/pages/prepare/index?corpName=${corpName}&interviewRecordId=${interviewRecordId}`,
+        });
+      })
     })
   }
 })

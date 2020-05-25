@@ -31,3 +31,10 @@
 .btn-wrap{
   margin-top: 50rpx;
 }
+
+.hide-pusher{
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -5;
+}

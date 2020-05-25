@@ -7,7 +7,6 @@
     url="{{quesInfo.pushUrl}}"
     beauty="{{3}}"
     whiteness="{{3}}"
-    autopush
     enable-camera>
   </live-pusher>
   <view class="timmer">答题倒计时：{{quesDuration}}s</view>

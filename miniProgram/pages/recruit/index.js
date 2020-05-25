@@ -53,7 +53,7 @@ Page({
     }).then(res => {
       console.log(res);
       if (res.data.recordStatus === 3) {
-        wx.navigateTo({
+        wx.redirectTo({
           url: '/pages/complete/index',
         })
       } else {
@@ -78,6 +78,7 @@ Page({
       currentBtnText: '下一题'
     });
 
+    this.livePusherCtx.start();
     this.startCutdown();  // 开始倒计时
     this.startLimitCount();  // 最短答题时间计时
   },

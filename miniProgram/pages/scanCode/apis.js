@@ -51,7 +51,7 @@ function getSmsCode(data) {
   })
 }
 
-function startRecruit(data) {
+function recordRecruit(data) {
   return new Promise((resolve, reject) => {
     Ajax({
       url: `/app/interviewAiBatchRecord/record.do`,
@@ -62,9 +62,23 @@ function startRecruit(data) {
   })
 }
 
+function startRecruit(code) {
+  return new Promise((resolve, reject) => {
+    Ajax({
+      url: `/app/interviewAiRecord/start.do`,
+      data: {
+        code
+      }
+    }).then(res => {
+      resolve(res.data);
+    })
+  })
+}
+
 module.exports = {
   getPositionList,
   getImgCode,
   getSmsCode,
+  recordRecruit,
   startRecruit
 }

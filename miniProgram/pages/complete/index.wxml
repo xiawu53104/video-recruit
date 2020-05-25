@@ -1,2 +1,2 @@
 <!--pages/complete/index.wxml-->
-<view>面试已结束</view>
+<view class="container">面试已结束</view>
