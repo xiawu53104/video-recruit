@@ -4,8 +4,6 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  /* background: #4390D6; */
-  /* color: #fff; */
 }
 
 .title{
@@ -16,7 +14,7 @@
 .tips-wrap{
   padding: 0 50rpx;
   font-size: 26rpx;
-  margin-top: 50rpx;
+  margin-top: 80rpx;
   box-sizing: border-box;
 }
 
@@ -25,11 +23,11 @@
 }
 
 .tips{
-  margin-top: 15rpx;
+  margin-top: 25rpx;
 }
 
 .btn-wrap{
-  margin-top: 50rpx;
+  margin-top: 80rpx;
 }
 
 .hide-pusher{

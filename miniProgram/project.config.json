@@ -83,6 +83,12 @@
 					"pathName": "pages/complete/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userCenter/index",
+					"pathName": "pages/userCenter/index",
+					"scene": null
 				}
 			]
 		}

@@ -1,0 +1,62 @@
+/* pages/userCenter/index.wxss */
+.container{
+  background: #f9f9f9;
+}
+
+.container::before{
+  display: table;
+  content: ' ';
+}
+
+.empty-text{
+  text-align: center;
+  margin-top: 250rpx;
+  font-size: 38rpx;
+}
+
+.title{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+}
+
+.list-item{
+  padding: 10rpx 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 15rpx;
+}
+
+.item-top{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.postion-name{
+  font-size: 42rpx;
+  font-weight: bold;
+}
+
+.company-name{
+  font-size: 36rpx;
+}
+
+.item-bottom{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15rpx;
+}
+
+.time{
+  color: #333;
+  font-size: 30rpx;
+}
+
+.status{
+  color: #333;
+  font-size: 30rpx;
+}

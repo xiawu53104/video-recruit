@@ -54,5 +54,20 @@ Page({
       code: v,
       btnDisable: v.length !== 6,
     });
+  },
+
+  startMoni: function() {
+    Ajax({
+      url: `/app/interviewAiTestRecord/start.do`
+    }).then(res => {
+      const { corpName } = res.data;
+      wx.navigateTo({
+        url: `/pages/prepare/index?corpName=${corpName}`,
+      });
+    })
+  },
+
+  onShareAppMessage: function () {
+    
   }
 })

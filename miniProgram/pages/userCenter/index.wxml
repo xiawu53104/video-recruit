@@ -1,0 +1,18 @@
+<!--pages/userCenter/index.wxml-->
+<view class="container">
+  <view class="empty-text" wx:if="{{!recruitList.length}}">您还没有面试申请!</view>
+
+  <view class="list-wrap" wx:if="{{recruitList.length}}">
+    <view class="title">我的面试申请：</view>
+    <view class="list-item" wx:for="{{recruitList}}" wx:key="index" bindtap="clickHandle" data-index="{{index}}">
+      <view class="item-top">
+        <text class="postion-name">{{item.positionName}}</text>
+        <text class="company-name">{{item.corpName}}</text>
+      </view>
+      <view class="item-bottom">
+        <text class="time">{{item.interviewBeginTime}}</text>
+        <text class="status">{{item.recordStatusLable}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+/* pages/recordDetail/index.wxss */
+
+.item-wrap{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.item{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 30rpx 0;
+}
+
+.label{
+  font-size: 36rpx;
+  color: #333;
+}
+
+.value{
+  font-size: 36rpx;
+  color: #000;
+}
+
+.btn{
+  margin-top: 60rpx;
+}

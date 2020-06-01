@@ -1,2 +1,5 @@
 <!--pages/complete/index.wxml-->
-<view class="container">面试已结束</view>
+<view class="container">
+  <text class="text">面试已结束</text>
+  <view class="btn" bindtap="handleClick">返回首页</view>
+</view>

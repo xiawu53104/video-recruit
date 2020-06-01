@@ -1,16 +1,35 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/userCenter/index",
     "pages/prepare/index",
     "pages/recruit/index",
     "pages/complete/index",
-    "pages/scanCode/index"
+    "pages/scanCode/index",
+    "pages/recordDetail/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "视频面试",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#409eff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/index.png",
+        "selectedIconPath": "static/images/index-active.png"
+      },
+      {
+        "pagePath": "pages/userCenter/index",
+        "text": "我的",
+        "iconPath": "static/images/my.png",
+        "selectedIconPath": "static/images/my-active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

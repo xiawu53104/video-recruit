@@ -28,7 +28,7 @@ function getImgCode(eq) {
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      url: 'http://zhaopin.iwatchcloud.com/base/verificationCode/codeV1.do',
+      url: 'https://zhaopin.iwatchcloud.com/base/verificationCode/codeV1.do',
       method: 'post',
       data: {
         eq: eq

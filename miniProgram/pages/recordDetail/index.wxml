@@ -1,0 +1,35 @@
+<!--pages/recordDetail/index.wxml-->
+<view class="container">
+  <view class="item-wrap">
+    <view class="item">
+      <text class="label">面试公司</text>
+      <text class="value">{{record.corpName}}</text>
+    </view>
+  </view>
+  <view class="item-wrap">
+    <view class="item">
+      <text class="label">应聘岗位</text>
+      <text class="value">{{record.positionName}}</text>
+    </view>
+  </view>
+  <view class="item-wrap">
+    <view class="item">
+      <text class="label">面试类型</text>
+      <text class="value">{{record.interviewTypeLable}}</text>
+    </view>
+  </view>
+  <view class="item-wrap">
+    <view class="item">
+      <text class="label">面试时间</text>
+      <text class="value">{{record.interviewBeginTime}}</text>
+    </view>
+  </view>
+  <view class="item-wrap">
+    <view class="item">
+      <text class="label">面试状态</text>
+      <text class="value">{{record.recordStatusLable}}</text>
+    </view>
+  </view>
+
+  <button class="btn" bindtap="clickHandle">回到首页</button>
+</view>

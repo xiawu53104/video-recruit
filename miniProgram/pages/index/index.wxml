@@ -6,4 +6,5 @@
     <input placeholder="请输入邀请码" value="{{code}}" bindinput="handleInput" />
   </view>
   <button class="start-btn" type="primary" bindtap="startRecruit" disabled="{{btnDisable}}">开始面试</button>
+  <button class="start-btn" type="primary" bindtap="startMoni">模拟面试</button>
 </view>

@@ -26,7 +26,7 @@ Page({
    */
   onLoad: function (options) {
     const secen = decodeURIComponent(options.secen || '');
-    const code = secen || '5EC7DD8BE4B0AF822954BAA5';
+    const code = secen || '5ED0F8CFE4B00CB5FFCCF4E4';
     this.uniCode = code;
 
     getPositionList(code).then(data => {
@@ -122,11 +122,11 @@ Page({
         showModal: false
       });
       if (res.msg) {
-        wx.showToast({
-          title: res.msg,
-          icon: 'none',
-          duration: 1200
-        });
+        // wx.showToast({
+        //   title: res.msg,
+        //   icon: 'none',
+        //   duration: 1200
+        // });
       } else {
         wx.showToast({
           title: '发送成功',
@@ -179,14 +179,14 @@ Page({
     delete sendData.code;
     sendData.code = this.uniCode;
     recordRecruit(sendData).then(res => {
-      if (res.msg) {
-        wx.showToast({
-          title: res.msg,
-          icon: 'none',
-          duration: 1200
-        });
-        return;
-      }
+      // if (res.msg) {
+      //   wx.showToast({
+      //     title: res.msg,
+      //     icon: 'none',
+      //     duration: 1200
+      //   });
+      //   return;
+      // }
       const { interviewAiRecordCode } = res.data;
       startRecruit(interviewAiRecordCode).then(response => {
         const { corpName, interviewRecordId } = response;

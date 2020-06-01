@@ -42,10 +42,18 @@ Page({
     });
   },
 
+  onUnload: function () {
+    this.livePusherCtx.stop();
+    this.innerAudioCtx.stop();
+  },
+
   getQuesInfo: function() {
     const { interviewRecordId, answerExamPaperDetailId } = this.data;
+    const url = interviewRecordId
+      ? `/app/interviewAiRecord/getCurrentExamPaperDetail.do`
+      : `/app/interviewAiTestRecord/getCurrentExamPaperDetail.do`
     Ajax({
-      url: `/app/interviewAiRecord/getCurrentExamPaperDetail.do`,
+      url: url,
       data: {
         interviewRecordId,
         answerExamPaperDetailId
@@ -138,4 +146,8 @@ Page({
       this.handleNext();
     }
   },
+
+  onShareAppMessage: function () {
+
+  }
 })

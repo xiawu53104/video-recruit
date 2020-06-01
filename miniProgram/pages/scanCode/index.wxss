@@ -15,14 +15,14 @@
 }
 
 .form-wrap{
-  margin-top: 50rpx;
+  margin-top: 60rpx;
   padding: 0 40rpx;
   box-sizing: border-box;
 }
 
 .form-item{
   display: flex;
-  margin-bottom: 18rpx;
+  margin-bottom: 28rpx;
   position: relative;
   width: 100%;
   height: 60rpx;

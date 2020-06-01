@@ -9,12 +9,13 @@
 .title{
   font-weight: bold;
   font-size: 42rpx;
-  margin-top: 60rpx;
+  margin-top: 80rpx;
 }
 
 .sub-title{
-  margin-top: 50rpx;
+  margin-top: 80rpx;
   font-size: 36rpx;
+  margin-bottom: 50rpx;
 }
 
 .input-wrap {
@@ -28,5 +29,5 @@
 }
 
 .start-btn{
-  margin-top: 50rpx;
+  margin-top: 60rpx;
 }
